@@ -1,6 +1,6 @@
 {
   "name": "@hpe/hpe-scripts",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "HPE scripts",
   "main": "index.js",
   "repository": {
