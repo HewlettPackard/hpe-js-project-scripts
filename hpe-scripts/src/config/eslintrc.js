@@ -45,5 +45,6 @@ module.exports = {
     'react/jsx-one-expression-per-line': 0,
     'import/no-extraneous-dependencies': 0,
     'import/no-cycle': 0,
+    'global-require': 0,
   },
 };
