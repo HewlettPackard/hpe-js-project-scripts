@@ -2,6 +2,7 @@
   "private": true,
   "workspaces": [
     "hpe-scripts",
-    "cra-site"
+    "cra-site",
+    "next-site"
   ]
 }

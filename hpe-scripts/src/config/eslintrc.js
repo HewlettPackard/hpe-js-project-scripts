@@ -19,6 +19,8 @@ module.exports = {
     alert: true,
   },
   rules: {
+    semi: [2, 'always'],
+    'object-curly-spacing': ['error', 'always'],
     'max-len': 0,
     'jsx-a11y/href-no-hash': 0,
     'jsx-a11y/anchor-is-valid': 0,
@@ -28,6 +30,7 @@ module.exports = {
     'import/no-named-as-default': 0,
     'import/newline-after-import': 1,
     'react/no-unescaped-entities': 0,
+    'react/jsx-first-prop-new-line': [1, 'multiline'],
     'import/prefer-default-export': 0,
     'class-methods-use-this': 0,
     'operator-linebreak': 0,
