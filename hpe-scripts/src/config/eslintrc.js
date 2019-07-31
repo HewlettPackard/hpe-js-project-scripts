@@ -1,7 +1,7 @@
 module.exports = {
   parser: require.resolve('babel-eslint'),
-  extends: [require.resolve('eslint-config-airbnb')],
-  plugins: [require.resolve('eslint-plugin-react')],
+  extends: ['airbnb', 'prettier', 'prettier/react'],
+  plugins: ['react', 'prettier'],
   env: {
     browser: true,
     jest: true,
@@ -19,7 +19,6 @@ module.exports = {
     alert: true,
   },
   rules: {
-    'comma-dangle': 1,
     'max-len': 0,
     'jsx-a11y/href-no-hash': 0,
     'jsx-a11y/anchor-is-valid': 0,
@@ -27,6 +26,7 @@ module.exports = {
     'react/jsx-filename-extension': 0,
     'implicit-arrow-linebreak': 0,
     'import/no-named-as-default': 0,
+    'import/newline-after-import': 1,
     'react/no-unescaped-entities': 0,
     'import/prefer-default-export': 0,
     'class-methods-use-this': 0,
@@ -43,4 +43,4 @@ module.exports = {
     'import/no-extraneous-dependencies': 0,
     'import/no-cycle': 0,
   },
-}
+};

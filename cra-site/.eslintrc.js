@@ -1,2 +1,2 @@
 const scripts = require('@hpe/hpe-scripts');
-module.exports = scripts.prettier;
+module.exports = scripts.eslint;
