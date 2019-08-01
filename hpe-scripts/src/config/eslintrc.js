@@ -1,5 +1,5 @@
 module.exports = {
-  parser: require.resolve('babel-eslint'),
+  parser: 'babel-eslint',
   extends: ['airbnb', 'prettier', 'prettier/react'],
   plugins: ['react', 'prettier'],
   env: {
@@ -46,5 +46,6 @@ module.exports = {
     'import/no-extraneous-dependencies': 0,
     'import/no-cycle': 0,
     'global-require': 0,
+    'import/no-dynamic-require': 0,
   },
 };

@@ -1,4 +1,9 @@
+const path = require('path');
+
+const eslintPath = path.join(__dirname, 'dist', 'eslintrc');
+const prettierPath = path.join(__dirname, 'dist', 'prettierrc');
+
 module.exports = {
-  eslint: require('./src/config/eslintrc'),
-  prettier: require('./src/config/prettierrc'),
+  eslint: require(eslintPath),
+  prettier: require(prettierPath),
 };
