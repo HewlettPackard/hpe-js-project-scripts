@@ -1,7 +1,7 @@
 {
-  "name": "@hpe/hpe-scripts",
+  "name": "@karatechops/project-scripts",
   "version": "1.0.0",
-  "description": "HPE scripts",
+  "description": "Project scripts",
   "main": "index.js",
   "repository": {
     "type": "git",
