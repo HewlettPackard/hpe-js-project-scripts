@@ -56,7 +56,7 @@ module.exports = scripts.prettier;
 
 5. Create a `.prettierignore` in your root folder.
 
-6. Similarly to eslint's ignore, the contents of this file will depend on your project's structure. Here's a good starting point:
+6. Similarly to your eslint's ignore file, the contents of this file will depend on your project's structure. Here's a good starting point:
 
 ```
 package-lock.json
