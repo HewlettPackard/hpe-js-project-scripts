@@ -1,8 +1,8 @@
 {
   "private": true,
   "workspaces": [
-    "project-scripts",
-    "cra-site",
-    "next-site"
+    "packages/*",
+    "examples/cra-site",
+    "examples/next-site"
   ]
 }
