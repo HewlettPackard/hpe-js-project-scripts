@@ -6,12 +6,12 @@ Commonly used scripts and utilities to bootstrap your project. This package curr
 
 Before installing dependencies check your project's `package.json` for existing `eslint` dependencies, remove any dependencies or dev-dependencies containing `eslint` as well as any existing `.eslintrc` files.
 
-1. In your projects root folder run `npm install -D @hpe/hpe-js-project-scripts` or `yarn add -D /hpe-js-project-scripts`
+1. In your projects root folder run `npm install -D @hpe/project-scripts` or `yarn add -D @hpe/project-scripts`
 1. create a `.eslintrc.js` in your project's root folder
 1. Add the following snippet to your eslintrc file
 
 ```javascript
-const scripts = require('@hpe/hpe-js-project-scripts');
+const scripts = require('@hpe/project-scripts');
 module.exports = scripts.eslint;
 ```
 
