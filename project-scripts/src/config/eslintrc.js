@@ -1,3 +1,5 @@
+// (C) Copyright 2019 Hewlett Packard Enterprise Development LP.
+
 module.exports = {
   parser: 'babel-eslint',
   extends: ['airbnb', 'prettier', 'prettier/react'],

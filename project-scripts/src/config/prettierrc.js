@@ -1,3 +1,5 @@
+// (C) Copyright 2019 Hewlett Packard Enterprise Development LP.
+
 module.exports = {
   printWidth: 80,
   tabWidth: 2,

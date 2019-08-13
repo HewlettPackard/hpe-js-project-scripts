@@ -1,11 +1,11 @@
 {
-  "name": "@karatechops/project-scripts",
-  "version": "1.0.1",
-  "description": "Project scripts",
+  "name": "@hpe/project-scripts",
+  "version": "1.0.2",
+  "description": "HPE JS project scripts",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": " https://github.com/karatechops/project-scripts.git"
+    "url": " https://github.com/HewlettPackard/hpe-js-project-scripts.git"
   },
   "scripts": {
     "build": "rm -rf dist && webpack --mode production"

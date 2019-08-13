@@ -1,2 +1,2 @@
-const scripts = require('@karatechops/project-scripts');
+const scripts = require('@hpe/project-scripts');
 module.exports = scripts.eslint;

@@ -1,3 +1,5 @@
+// (C) Copyright 2019 Hewlett Packard Enterprise Development LP.
+
 const path = require('path');
 
 const eslintPath = path.join(__dirname, 'dist', 'eslintrc');

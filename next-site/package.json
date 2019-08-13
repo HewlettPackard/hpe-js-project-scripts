@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.8.0",
-    "@karatechops/project-scripts": "*"
+    "@hpe/project-scripts": "*"
   },
   "license": "ISC"
 }
