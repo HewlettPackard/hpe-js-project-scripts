@@ -10,8 +10,8 @@ function Fetcher(url, reqParams) {
     try {
       setLoading(true);
       const response = await fetch(url, reqParams);
-      const data = await response.json();
-      setData(data);
+      const responseData = await response.json();
+      setData(responseData);
     } catch (e) {
       setError(e);
     } finally {
