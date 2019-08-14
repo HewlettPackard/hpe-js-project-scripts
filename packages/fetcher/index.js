@@ -9,8 +9,9 @@ function Fetcher(url, reqParams) {
   async function loadData() {
     try {
       setLoading(true);
-      const actionData = await fetch(url, reqParams);
-      setData(actionData);
+      const response = await fetch(url, reqParams);
+      const data = await response.json();
+      setData(data);
     } catch (e) {
       setError(e);
     } finally {

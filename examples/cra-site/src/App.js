@@ -5,24 +5,26 @@ import './App.css';
 
 function App() {
   const [data, loading, error] = useFetcher(
-    'api.openweathermap.org/data/2.5/weather?zip=94040,us',
+    'https://api.openweathermap.org/data/2.5/weather?zip=27278&appid=18ef348ece45174572c5e3d4be8a8d69&units=imperial',
   );
-  console.log(data, loading, error);
   return (
     <div className="App">
+      <div />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {loading && <img src={logo} className="App-logo" alt="logo" />}
+        {error && (
+          <div>
+            This error happened:{' '}
+            <span style={{ background: '#d14545', padding: '2px 5px' }}>
+              {error.toString()}
+            </span>
+          </div>
+        )}
+        {data && (
+          <div>
+            {data.name} is {data.main.temp} degrees.
+          </div>
+        )}
       </header>
     </div>
   );
