@@ -1,8 +1,13 @@
 import React from 'react';
+import useFetcher from '@hpe/fetcher';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const [data, loading, error] = useFetcher(
+    'api.openweathermap.org/data/2.5/weather?zip=94040,us',
+  );
+  console.log(data, loading, error);
   return (
     <div className="App">
       <header className="App-header">

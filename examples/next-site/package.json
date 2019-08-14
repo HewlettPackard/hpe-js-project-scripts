@@ -15,7 +15,8 @@
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.8.0",
-    "@hpe/project-scripts": "*"
+    "@hpe/project-scripts": "*",
+    "@hpe/fetcher": "*"
   },
   "license": "ISC"
 }

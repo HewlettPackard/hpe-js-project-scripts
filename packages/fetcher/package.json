@@ -13,7 +13,8 @@
   "author": "Alex Mejias",
   "license": "MIT",
   "dependencies": {
-    "@hpe/project-scripts": "*"
+    "@hpe/project-scripts": "*",
+    "isomorphic-fetch": "^2.2.1"
   },
   "devDependencies": {
     "babel-loader": "^8.0.6",
