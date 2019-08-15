@@ -16,6 +16,12 @@ module.exports = {
   },
   externals: {
     react: 'commonjs react',
+    'isomorphic-fetch': {
+      root: 'isomorphic-fetch',
+      commonjs2: 'isomorphic-fetch',
+      commonjs: 'isomorphic-fetch',
+      amd: 'isomorphic-fetch',
+    },
   },
   resolve: {
     extensions: ['.js', '.json'],

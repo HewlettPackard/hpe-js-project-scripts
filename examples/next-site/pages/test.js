@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { Box, Heading } from 'grommet';
 
-const Home = ({ data, error }) => {
+const Test = ({ data, error }) => {
   return (
     <Box align="center" margin="large">
-      <Heading size="xlarge">Home Page</Heading>
+      <Heading size="xlarge">Next Page</Heading>
       {error && <Heading>this error happened: {error}</Heading>}
       {!data && !error && <Heading>Loading...</Heading>}
       {data && (
@@ -14,8 +14,8 @@ const Home = ({ data, error }) => {
           {data.name} is {data.main.temp} degrees.
         </Heading>
       )}
-      <Link href="/test">
-        <a>Next Page</a>
+      <Link href="/">
+        <a>Home Page</a>
       </Link>
     </Box>
   );
@@ -23,7 +23,7 @@ const Home = ({ data, error }) => {
 
 // Next.js would not use the @hpe/fetcher util as it has
 // its own method for data fetching
-Home.getInitialProps = async () => {
+Test.getInitialProps = async () => {
   try {
     const response = await fetch(
       'https://api.openweathermap.org/data/2.5/weather?zip=27278&appid=18ef348ece45174572c5e3d4be8a8d69&units=imperial',
@@ -35,7 +35,7 @@ Home.getInitialProps = async () => {
   }
 };
 
-Home.propTypes = {
+Test.propTypes = {
   data: PropTypes.shape({
     name: PropTypes.string,
     main: PropTypes.shape({
@@ -45,4 +45,4 @@ Home.propTypes = {
   error: PropTypes.string,
 };
 
-export default Home;
+export default Test;
