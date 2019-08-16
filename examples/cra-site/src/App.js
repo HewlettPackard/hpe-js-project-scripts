@@ -1,5 +1,5 @@
 import React from 'react';
-import useFetcher from '@hpe/fetcher';
+import { useFetcher } from '@hpe/react-hooks';
 import logo from './logo.svg';
 import './App.css';
 

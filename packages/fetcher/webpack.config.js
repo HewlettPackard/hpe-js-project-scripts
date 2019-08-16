@@ -11,7 +11,7 @@ module.exports = {
   output: {
     path: path.resolve('./dist'),
     filename: '[name].js',
-    library: '',
+    library: 'ReactHooks',
     libraryTarget: 'commonjs2',
   },
   externals: {
@@ -27,10 +27,7 @@ module.exports = {
     extensions: ['.js', '.json'],
   },
   plugins: [
-    new CopyWebpackPlugin([
-      { from: './README.md' },
-      { from: './package.json' },
-    ]),
+    new CopyWebpackPlugin([{ from: './README.md' }]),
     new webpack.NamedModulesPlugin(),
   ],
   module: {

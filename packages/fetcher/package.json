@@ -1,5 +1,5 @@
 {
-  "name": "@hpe/fetcher",
+  "name": "@hpe/react-hooks",
   "version": "1.0.0",
   "description": "React hooks based fetch utility",
   "main": "dist/index.js",
