@@ -1,0 +1,31 @@
+{
+  "name": "@hpe/react-hooks",
+  "version": "1.0.0",
+  "description": "React hooks based fetch utility",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": " https://github.com/HewlettPackard/hpe-js-project-scripts.git"
+  },
+  "scripts": {
+    "build": "rm -rf dist && webpack --mode production"
+  },
+  "author": "Alex Mejias",
+  "license": "MIT",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@hpe/project-scripts": "*",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.0.4",
+    "webpack": "^4.38.0",
+    "webpack-cli": "^3.3.6"
+  },
+  "peerDependencies": {
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0"
+  }
+}
