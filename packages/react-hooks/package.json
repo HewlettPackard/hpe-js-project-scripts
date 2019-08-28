@@ -1,6 +1,6 @@
 {
   "name": "@hpe/react-hooks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reusable react hooks.",
   "main": "dist/index.js",
   "repository": {
