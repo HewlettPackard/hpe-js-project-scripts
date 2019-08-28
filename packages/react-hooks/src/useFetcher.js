@@ -1,5 +1,5 @@
 // (C) Copyright 2019 Hewlett Packard Enterprise Development LP.
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import fetch from 'isomorphic-fetch';
 
 function useFetcher(url, reqParams) {
@@ -7,7 +7,7 @@ function useFetcher(url, reqParams) {
   const [error, setError] = useState(null);
   const [data, setData] = useState(null);
 
-  async function loadData() {
+  const loadData = useCallback(async () => {
     try {
       setLoading(true);
       const response = await fetch(url, reqParams);
@@ -18,11 +18,11 @@ function useFetcher(url, reqParams) {
     } finally {
       setLoading(false);
     }
-  }
+  }, [url, reqParams]);
 
   useEffect(() => {
     loadData();
-  }, [url]);
+  }, [loadData, url]);
 
   return [data, isLoading, error];
 }

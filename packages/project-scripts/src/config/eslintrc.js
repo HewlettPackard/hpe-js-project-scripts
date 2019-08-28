@@ -2,8 +2,13 @@
 
 module.exports = {
   parser: 'babel-eslint',
-  extends: ['airbnb', 'prettier', 'prettier/react'],
-  plugins: ['react', 'prettier'],
+  extends: [
+    'airbnb',
+    'plugin:jsx-a11y/recommended',
+    'prettier',
+    'prettier/react',
+  ],
+  plugins: ['react', 'jsx-a11y', 'react-hooks', 'prettier'],
   env: {
     browser: true,
     jest: true,
@@ -41,6 +46,8 @@ module.exports = {
     'react/no-danger': 0,
     'react/prefer-stateless-function': 0,
     'react/no-array-index-key': 0,
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
     'no-return-assign': 0,
     'react/destructuring-assignment': 0,
     'react/forbid-prop-types': 0,
