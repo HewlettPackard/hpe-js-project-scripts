@@ -13,6 +13,9 @@
   "author": "Alex Mejias",
   "license": "MIT",
   "dependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.2",
     "eslint": "^5.3.0",
     "eslint-config-airbnb": "^17.1.1",
