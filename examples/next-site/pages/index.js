@@ -14,7 +14,7 @@ const Home = ({ data, error }) => {
           {data.name} is {data.main.temp} degrees.
         </Heading>
       )}
-      <Link href="/test">
+      <Link href="/pageTwo">
         <a>Next Page</a>
       </Link>
     </Box>

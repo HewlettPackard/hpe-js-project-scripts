@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders 1`] = `
+<div
+  className="StyledBox-sc-13pk1d4-0 kwUvnO"
+>
+  <h1
+    className="StyledHeading-sc-1rdh4aw-0 dpOUKP"
+    size="xlarge"
+  >
+    Home Page
+  </h1>
+  <h1
+    className="StyledHeading-sc-1rdh4aw-0 rfVJR"
+  >
+    test
+     is 
+    7000
+     degrees.
+  </h1>
+  <a
+    href="/pageTwo"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+  >
+    Next Page
+  </a>
+</div>
+`;
+
+exports[`Page Two renders 1`] = `
+<div
+  className="StyledBox-sc-13pk1d4-0 kwUvnO"
+>
+  <h1
+    className="StyledHeading-sc-1rdh4aw-0 dpOUKP"
+    size="xlarge"
+  >
+    Next Page
+  </h1>
+  <h1
+    className="StyledHeading-sc-1rdh4aw-0 rfVJR"
+  >
+    test
+     is 
+    7000
+     degrees.
+  </h1>
+  <a
+    href="/"
+    onClick={[Function]}
+    onMouseEnter={[Function]}
+  >
+    Home Page
+  </a>
+</div>
+`;

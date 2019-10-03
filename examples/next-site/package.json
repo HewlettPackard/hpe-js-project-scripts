@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "yarn jest"
   },
   "dependencies": {
     "grommet": "^2.5.5",
@@ -16,6 +17,7 @@
   "devDependencies": {
     "babel-plugin-styled-components": "^1.8.0",
     "@hpe/project-scripts": "*",
+    "@hpe/project-tests": "*",
     "@hpe/react-hooks": "*"
   },
   "license": "ISC"

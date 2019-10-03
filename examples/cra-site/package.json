@@ -7,12 +7,13 @@
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
     "@hpe/project-scripts": "*",
+    "@hpe/project-tests": "*",
     "@hpe/react-hooks": "*"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "yarn jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

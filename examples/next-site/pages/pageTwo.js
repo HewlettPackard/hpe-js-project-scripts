@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { Box, Heading } from 'grommet';
 
-const Test = ({ data, error }) => {
+const PageTwo = ({ data, error }) => {
   return (
     <Box align="center" margin="large">
       <Heading size="xlarge">Next Page</Heading>
@@ -23,7 +23,7 @@ const Test = ({ data, error }) => {
 
 // Next.js would not use the @hpe/fetcher util as it has
 // its own method for data fetching
-Test.getInitialProps = async () => {
+PageTwo.getInitialProps = async () => {
   try {
     const response = await fetch(
       'https://api.openweathermap.org/data/2.5/weather?zip=27278&appid=18ef348ece45174572c5e3d4be8a8d69&units=imperial',
@@ -35,7 +35,7 @@ Test.getInitialProps = async () => {
   }
 };
 
-Test.propTypes = {
+PageTwo.propTypes = {
   data: PropTypes.shape({
     name: PropTypes.string,
     main: PropTypes.shape({
@@ -45,4 +45,4 @@ Test.propTypes = {
   error: PropTypes.string,
 };
 
-export default Test;
+export default PageTwo;
