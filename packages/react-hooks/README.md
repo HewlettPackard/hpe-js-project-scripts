@@ -47,6 +47,8 @@ export default App;
 
 ## useIntersection
 
+![intersection example animation](http://g.recordit.co/PTPsuBgrHT.gif)
+
 A hook for observing when a DOM node or nodes enters or leaves a browser viewport. `useIntersection` accepts all parameters which the [Intersection Observer API spec](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) accepts including `root`, `rootMargin`, and `threshold`.
 
 _**Note:** this feature is not IE11 compatible without a [polyfill](https://github.com/w3c/IntersectionObserver/tree/master/polyfill)_
