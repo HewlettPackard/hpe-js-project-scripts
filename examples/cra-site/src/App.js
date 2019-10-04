@@ -29,17 +29,39 @@ function App() {
         )}
       </header>
       <div style={{ height: '100vh' }} />
-      <div ref={thingToWatch}>
+      <div
+        ref={thingToWatch}
+        style={{
+          textAlign: 'center',
+        }}
+      >
+        <span
+          style={{
+            opacity: isVisible ? 1 : 0,
+            display: 'block',
+            transform: `translateY(${isVisible ? 0 : 30}vh) translateX(${
+              isVisible ? 0 : -30
+            }vw) rotate(${isVisible ? 10 : -45}deg)`,
+            transition: 'opacity 0.25s ease-in, transform 1s ease-out',
+            fontSize: '100px',
+            lineHeight: '50px',
+          }}
+          role="img"
+          aria-label="eyes looking around"
+        >
+          🚀
+        </span>
         <h1
           style={{
             opacity: isVisible ? 1 : 0,
-            transition: 'opacity 1s ease-in',
+            display: 'block',
+            transform: `translateY(${isVisible ? 0 : 5}vh)`,
+            transition: 'opacity 0.25s linear, transform 0.5s ease-out',
+            transitionDelay: '0.5s',
+            fontSize: '50px',
           }}
         >
-          Im now in view{' '}
-          <span role="img" aria-label="eyes looking around">
-            👀
-          </span>
+          Hi!
         </h1>
       </div>
       <div style={{ height: '100vh' }} />
