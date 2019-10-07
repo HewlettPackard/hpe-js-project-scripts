@@ -1,5 +1,5 @@
-const { jestNextConfig } = require('@hpe/project-tests');
+const { genericJestConfig } = require('@hpe/project-tests');
 
 module.exports = {
-  testPathIgnorePatterns: jestNextConfig.testPathIgnorePatterns,
+  testPathIgnorePatterns: genericJestConfig.testPathIgnorePatterns,
 };

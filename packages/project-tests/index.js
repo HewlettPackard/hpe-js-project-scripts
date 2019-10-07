@@ -1,4 +1,4 @@
 const reactTestRenderer = require('react-test-renderer');
-const jestNextConfig = require('./jest.next-config');
+const genericJestConfig = require('./jest.generic-config');
 
-module.exports = { jestNextConfig, reactTestRenderer };
+module.exports = { genericJestConfig, reactTestRenderer };
