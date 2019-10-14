@@ -3,6 +3,7 @@
   "workspaces": [
     "packages/*",
     "examples/cra-site",
-    "examples/next-site"
+    "examples/next-site",
+    "examples/gatsby-site"
   ]
 }
