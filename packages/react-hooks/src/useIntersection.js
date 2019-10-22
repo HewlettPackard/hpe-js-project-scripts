@@ -7,7 +7,6 @@ export const useIntersection = ({
   repeats = true,
   debug = false,
 } = {}) => {
-  // This breaks react-hooks lint...
   const isWindowObservable =
     typeof window !== 'undefined' && 'IntersectionObserver' in window;
   const [observerEntry, updateEntry] = useState({});
