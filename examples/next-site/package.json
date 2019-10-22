@@ -8,15 +8,16 @@
   },
   "dependencies": {
     "grommet": "^2.5.5",
+    "isomorphic-fetch": "^2.2.1",
     "next": "latest",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "styled-components": "^4.0.0"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.8.0",
     "@hpe/project-scripts": "*",
-    "@hpe/react-hooks": "*"
+    "@hpe/react-hooks": "*",
+    "babel-plugin-styled-components": "^1.8.0"
   },
   "license": "ISC"
 }

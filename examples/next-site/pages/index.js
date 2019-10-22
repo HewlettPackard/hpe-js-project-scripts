@@ -1,9 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import fetch from 'isomorphic-fetch';
+import { useIntersection } from '@hpe/react-hooks';
 import { Box, Heading } from 'grommet';
 
 const Home = ({ data, error }) => {
+  const [thingToWatch, entry] = useIntersection();
+  const isVisible = entry.isIntersecting;
+
   return (
     <Box align="center" margin="large">
       <Heading size="xlarge">Home Page</Heading>
@@ -17,6 +22,43 @@ const Home = ({ data, error }) => {
       <Link href="/test">
         <a>Next Page</a>
       </Link>
+      <div style={{ height: '100vh' }} />
+      <div
+        ref={thingToWatch}
+        style={{
+          textAlign: 'center',
+        }}
+      >
+        <span
+          style={{
+            opacity: isVisible ? 1 : 0,
+            display: 'block',
+            transform: `translateY(${isVisible ? 0 : 30}vh) translateX(${
+              isVisible ? 0 : -30
+            }vw) rotate(${isVisible ? 10 : -45}deg)`,
+            transition: 'opacity 0.25s ease-in, transform 1s ease-out',
+            fontSize: '100px',
+            lineHeight: '50px',
+          }}
+          role="img"
+          aria-label="eyes looking around"
+        >
+          🚀
+        </span>
+        <h1
+          style={{
+            opacity: isVisible ? 1 : 0,
+            display: 'block',
+            transform: `translateY(${isVisible ? 0 : 5}vh)`,
+            transition: 'opacity 0.25s linear, transform 0.5s ease-out',
+            transitionDelay: '0.5s',
+            fontSize: '50px',
+          }}
+        >
+          Hi!
+        </h1>
+      </div>
+      <div style={{ height: '100vh' }} />
     </Box>
   );
 };

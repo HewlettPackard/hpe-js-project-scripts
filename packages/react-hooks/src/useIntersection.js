@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 
-const useIntersection = ({
+export const useIntersection = ({
   root = null, // defaults to viewport when null.
   rootMargin, // expands or contracts the intersection root hit area
   threshold = 0, // intersection ratio value, also accepts arrays
@@ -9,7 +9,7 @@ const useIntersection = ({
 } = {}) => {
   // This breaks react-hooks lint...
   const isWindowObservable =
-    typeof window !== 'undefined' || 'IntersectionObserver' in window;
+    typeof window !== 'undefined' && 'IntersectionObserver' in window;
   const [observerEntry, updateEntry] = useState({});
   const [node, setNode] = useState(null);
 
