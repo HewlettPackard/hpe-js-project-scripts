@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { buildThresholdArray } from './utils';
 import useIntersect from './useIntersection';
 
@@ -71,7 +71,7 @@ export const useEntryPosition = () => {
     setEntryPos({ direction, elementIs });
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (!target && entryObserver.target) {
       setTarget(entryObserver.target);
       // Trigger single event for initial render.

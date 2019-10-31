@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import fetch from 'isomorphic-fetch';
-import { useIntersection } from '@hpe/react-hooks';
+import { useIntersection, useEntryPosition } from '@hpe/react-hooks';
 import { Box, Heading } from 'grommet';
 
 const Home = ({ data, error }) => {
   const [thingToWatch, entry] = useIntersection();
   const isVisible = entry.isIntersecting;
+  const [boxPosToWatch, { direction, elementIs }] = useEntryPosition();
 
   return (
     <Box align="center" margin="large">
@@ -56,6 +57,25 @@ const Home = ({ data, error }) => {
           }}
         >
           Hi!
+        </h1>
+      </div>
+      <div style={{ height: '100vh' }} />
+      <div
+        ref={boxPosToWatch}
+        style={{
+          display: 'inline-block',
+          padding: '20px',
+          border: `${elementIs === 'visible' ? 'green' : 'red'} 3px solid`,
+          transition: 'border-color 1s linear',
+          textAlign: 'center',
+          lineHeight: 1,
+        }}
+      >
+        <h1>
+          You are scrolling {direction} {direction === 'up' ? '⬆️' : '⬇️️'}{' '}
+          while
+          <br />
+          element is <u>{elementIs}</u> in the window.
         </h1>
       </div>
       <div style={{ height: '100vh' }} />
