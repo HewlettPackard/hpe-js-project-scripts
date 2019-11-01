@@ -87,9 +87,9 @@ function App() {
 
 ## useEntryPosition
 
-![intersection example animation](http://g.recordit.co/PTPsuBgrHT.gif)
+![intersection example animation](http://g.recordit.co/Dh6KJybnzh.gif)
 
-A hook to gain insights on an element's position in the browser viewport. The `useEntryPosition` returns three array items. The first is your ref to a component in the example we use `boxPosToWatch`. The second is an object containing `elementIs` and `direction`. `direction` refers to the direction the user is scrolling and will return either `up` or `down`. `elementIs` returns the element's position in relation to the view port, its return strings are `leaving`, `entering`, or `visible`. `visible` simply means the element is fully contained within the user's viewport. The third item being returned in the callback is `entryObserver`, this is to extend the functionality of the hook and will allow the developer to be very creative in what is possible with this hook.
+A hook to gain insights on an element's position in the browser viewport. The `useEntryPosition` returns three array items. The first is your ref to a component in the example we use `boxPosToWatch`. The second is an object containing `elementIs` and `direction`. `direction` refers to the direction the user is scrolling and will return either `up` or `down`. `elementIs` returns the element's position in relation to the view port, its return strings are `leaving`, `entering`, or `visible`. `visible` simply means the element is fully contained within the user's viewport. The third item being returned in the callback is `entryObserver`, this is an intersection observer on your ref. This observer can be used to extend the functionality of the position hook and will allow the developer to be very creative in what is possible with this hook.
 
 Here is an example using the `useEntryPosition` hook:
 
