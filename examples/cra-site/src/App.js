@@ -1,7 +1,15 @@
 import React from 'react';
-import { useFetcher, useIntersection } from '@hpe/react-hooks';
+import {
+  useFetcher,
+  useIntersection,
+  useEntryPosition,
+} from '@hpe/react-hooks';
 import logo from './logo.svg';
 import './App.css';
+
+const Space = () => (
+  <div /* The final frontier */ style={{ height: '101vh' }} />
+);
 
 function App() {
   const [data, loading, error] = useFetcher(
@@ -9,6 +17,7 @@ function App() {
   );
   const [thingToWatch, entry] = useIntersection();
   const isVisible = entry.isIntersecting;
+  const [boxPosToWatch, { direction, elementIs }] = useEntryPosition();
 
   return (
     <div className="App">
@@ -28,7 +37,7 @@ function App() {
           </div>
         )}
       </header>
-      <div style={{ height: '100vh' }} />
+      <Space />
       <div
         ref={thingToWatch}
         style={{
@@ -64,7 +73,24 @@ function App() {
           Hi!
         </h1>
       </div>
-      <div style={{ height: '100vh' }} />
+      <Space />
+      <div
+        ref={boxPosToWatch}
+        style={{
+          display: 'inline-block',
+          padding: '20px',
+          border: `${elementIs === 'visible' ? 'green' : 'red'} 3px solid`,
+          transition: 'border-color 1s linear',
+        }}
+      >
+        <h1>
+          You are scrolling {direction} {direction === 'up' ? '⬆️' : '⬇️️'}{' '}
+          while
+          <br />
+          element is <u>{elementIs}</u> in the window.
+        </h1>
+      </div>
+      <Space />
     </div>
   );
 }
