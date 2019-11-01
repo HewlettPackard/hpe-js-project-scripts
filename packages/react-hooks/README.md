@@ -84,3 +84,46 @@ function App() {
   );
 }
 ```
+
+## useEntryPosition
+
+![intersection example animation](http://g.recordit.co/PTPsuBgrHT.gif)
+
+A hook to gain insights on an element's position in the browser viewport. The `useEntryPosition` returns three array items. The first is your ref to a component in the example we use `boxPosToWatch`. The second is an object containing `elementIs` and `direction`. `direction` refers to the direction the user is scrolling and will return either `up` or `down`. `elementIs` returns the element's position in relation to the view port, its return strings are `leaving`, `entering`, or `visible`. `visible` simply means the element is fully contained within the user's viewport. The third item being returned in the callback is `entryObserver`, this is to extend the functionality of the hook and will allow the developer to be very creative in what is possible with this hook.
+
+Here is an example using the `useEntryPosition` hook:
+
+```javascript
+import React from 'react';
+import { useEntryPosition } from '@hpe/react-hooks';
+
+const Space = () => (
+  <div /* The final frontier */ style={{ height: '101vh' }} />
+);
+
+function App() {
+  const [boxPosToWatch, { direction, elementIs }] = useEntryPosition();
+  return (
+    <div>
+      <Space />
+      <div
+        ref={boxPosToWatch}
+        style={{
+          display: 'inline-block',
+          padding: '20px',
+          border: `${elementIs === 'visible' ? 'green' : 'red'} 3px solid`,
+          transition: 'border-color 1s linear',
+        }}
+      >
+        <h1>
+          You are scrolling {direction} {direction === 'up' ? '⬆️' : '⬇️️'}{' '}
+          while
+          <br />
+          element is <u>{elementIs}</u> in the window.
+        </h1>
+      </div>
+      <Space />
+    </div>
+  );
+}
+```
