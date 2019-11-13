@@ -1,6 +1,6 @@
 {
   "name": "@hpe/project-scripts",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "HPE JS project scripts",
   "main": "index.js",
   "repository": {
@@ -23,11 +23,5 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^2.0.1",
     "prettier": "^1.18.2"
-  },
-  "devDependencies": {
-    "babel-loader": "^8.0.6",
-    "copy-webpack-plugin": "^5.0.4",
-    "webpack": "^4.38.0",
-    "webpack-cli": "^3.3.6"
   }
 }
