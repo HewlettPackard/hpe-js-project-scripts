@@ -8,7 +8,9 @@
     "url": " https://github.com/HewlettPackard/hpe-js-project-scripts.git"
   },
   "scripts": {
-    "build": "rm -rf dist && webpack --mode production"
+    "build": "rm -rf dist && webpack --mode production",
+    "lint": "eslint src",
+    "lint-fix": "eslint src --fix"
   },
   "author": "Alex Mejias",
   "license": "MIT",
@@ -23,5 +25,8 @@
   "peerDependencies": {
     "react": ">= 16.8.0",
     "react-dom": ">= 16.8.0"
-  }
+  },
+  "pre-commit": [
+    "lint-fix"
+  ]
 }

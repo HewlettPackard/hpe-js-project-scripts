@@ -97,7 +97,8 @@ export const useEntryPosition = () => {
 
     // 🧹 Clean up when we're done.
     return () => document.removeEventListener('scroll', onScroll);
-  }, [onScroll, target, entryObserver, intersectionRatio]); // eslint-disable-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [onScroll, target, entryObserver, intersectionRatio]);
 
   return [setEntry, entryPos, entryObserver];
 };
