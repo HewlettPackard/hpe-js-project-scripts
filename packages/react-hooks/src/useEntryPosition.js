@@ -31,6 +31,7 @@ export const useEntryPosition = () => {
   });
   const [onScroll, setOnScroll] = useState();
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const handleScroll = () => {
     // Setting a function to state requires an extra return.
     const { top, bottom } = entryObserver.target.getBoundingClientRect();
@@ -97,7 +98,7 @@ export const useEntryPosition = () => {
 
     // 🧹 Clean up when we're done.
     return () => document.removeEventListener('scroll', onScroll);
-  }, [onScroll, target, entryObserver, intersectionRatio]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [onScroll, target, entryObserver, intersectionRatio, handleScroll]);
 
   return [setEntry, entryPos, entryObserver];
 };
