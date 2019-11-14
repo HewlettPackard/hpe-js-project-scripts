@@ -19,9 +19,6 @@
     "@hpe/project-scripts": "*",
     "@hpe/react-hooks": "*"
   },
-  "devDependencies": {
-    "prettier": "^1.18.2"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
