@@ -15,6 +15,8 @@ const scripts = require('@hpe/project-scripts');
 module.exports = scripts.eslint;
 ```
 
+Note: If you're running create react app you may see an error when airbnb config tries to load. As humans have not totally mastered package management, the following solution will fix it - `rm -rf node_modules && rm yarn.lock && yarn` 🙃
+
 3. Create a `.eslintignore` file. This file will vary depending on your project structure, here is a good starting point
 
 ```
