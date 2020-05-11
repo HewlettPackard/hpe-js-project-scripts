@@ -10,4 +10,5 @@ module.exports = {
   bracketSpacing: true,
   jsxBracketSameLine: false,
   jsxSingleQuote: false,
+  arrowParens: 'avoid',
 };
