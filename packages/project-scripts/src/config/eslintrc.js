@@ -58,6 +58,7 @@ module.exports = {
     'react/forbid-prop-types': 0,
     'react/jsx-one-expression-per-line': 0,
     'react/static-property-placement': 0,
+    'react/jsx-props-no-spreading': 0,
     'import/no-extraneous-dependencies': 0,
     'import/no-cycle': 0,
     'global-require': 0,
