@@ -44,6 +44,7 @@ Prettier requires some setup on your IDE's end. The following instructions are f
 ```
 // Set the default
 "editor.formatOnSave": false,
+"editor.defaultFormatter": "esbenp.prettier-vscode",
 // Enable per-language
 "[javascript]": {
     "editor.formatOnSave": true
