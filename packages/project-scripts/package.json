@@ -1,6 +1,6 @@
 {
   "name": "@hpe/project-scripts",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "HPE JS project scripts",
   "main": "index.js",
   "repository": {
@@ -10,7 +10,10 @@
   "scripts": {
     "build": "rm -rf dist && webpack --mode production"
   },
-  "author": "Alex Mejias",
+  "authors": [
+    "Alex Mejias", 
+    "Shimrit (Shimi) Yacobi"
+  ],
   "license": "MIT",
   "dependencies": {
     "babel-eslint": "^10.1.0",
