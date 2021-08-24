@@ -7,6 +7,7 @@ module.exports = {
     'plugin:jsx-a11y/recommended',
     'prettier',
     'prettier/react',
+    'plugin:grommet/recommended',
   ],
   plugins: ['react', 'jsx-a11y', 'react-hooks', 'prettier'],
   env: {
