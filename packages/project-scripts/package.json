@@ -1,6 +1,6 @@
 {
   "name": "@hpe/project-scripts",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "description": "HPE JS project scripts",
   "main": "index.js",
   "repository": {
@@ -11,20 +11,21 @@
     "build": "rm -rf dist && webpack --mode production"
   },
   "authors": [
-    "Alex Mejias", 
-    "Shimrit (Shimi) Yacobi"
+    "Alex Mejias",
+    "Shimrit (Shimi) Yacobi",
+    "Daniel Martin"
   ],
   "license": "MIT",
   "dependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.20.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-react": "^7.22.0",
-    "eslint-plugin-react-hooks": "^4.0.0",
-    "prettier": "^2.0.5"
+    "eslint": "^8.23.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.7",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.7.1"
   }
 }
