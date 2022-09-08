@@ -1,7 +1,12 @@
 // (C) Copyright 2019 Hewlett Packard Enterprise Development LP.
 
 module.exports = {
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
+  parserOptions: {
+    babelOptions: {
+      presets: ["@babel/preset-env"],
+    },
+  },
   extends: [
     'airbnb',
     'plugin:jsx-a11y/recommended',
