@@ -6,7 +6,6 @@ module.exports = {
     'airbnb',
     'plugin:jsx-a11y/recommended',
     'prettier',
-    'prettier/react',
   ],
   plugins: ['react', 'jsx-a11y', 'react-hooks', 'prettier'],
   env: {
