@@ -1,12 +1,21 @@
 // (C) Copyright 2019 Hewlett Packard Enterprise Development LP.
 
 module.exports = {
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
+  parserOptions: {
+    sourceType: "module",
+    requireConfigFile: false,
+    babelOptions: {
+      babelrc: false,
+      configFile: false,
+      // your babel options
+      presets: ["@babel/preset-react"],
+    },
+  },
   extends: [
     'airbnb',
     'plugin:jsx-a11y/recommended',
     'prettier',
-    'prettier/react',
   ],
   plugins: ['react', 'jsx-a11y', 'react-hooks', 'prettier'],
   env: {
