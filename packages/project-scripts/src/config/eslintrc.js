@@ -1,14 +1,12 @@
-// (C) Copyright 2019 Hewlett Packard Enterprise Development LP.
+// (C) Copyright 2022 Hewlett Packard Enterprise Development LP.
 
 module.exports = {
-  parser: 'babel-eslint',
-  extends: [
-    'airbnb',
-    'plugin:jsx-a11y/recommended',
-    'prettier',
-    'prettier/react',
-  ],
-  plugins: ['react', 'jsx-a11y', 'react-hooks', 'prettier'],
+  parser: '@babel/eslint-parser',
+  parserOptions: {
+    requireConfigFile: false,
+  },
+  extends: ['airbnb', 'plugin:jsx-a11y/recommended', 'prettier'],
+  plugins: ['react', 'jsx', 'jsx-a11y', 'react-hooks', 'prettier'],
   env: {
     browser: true,
     jest: true,
@@ -59,6 +57,9 @@ module.exports = {
     'react/jsx-one-expression-per-line': 0,
     'react/static-property-placement': 0,
     'react/jsx-props-no-spreading': 0,
+    'react/function-component-definition': 0,
+    'react/no-unstable-nested-components': 0,
+    'prefer-regex-literals': 0,
     'import/no-extraneous-dependencies': 0,
     'import/no-cycle': 0,
     'global-require': 0,

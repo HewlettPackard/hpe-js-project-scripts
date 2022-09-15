@@ -1,7 +1,6 @@
-// (C) Copyright 2019 Hewlett Packard Enterprise Development LP.
+// (C) Copyright 2022 Hewlett Packard Enterprise Development LP.
 
 const path = require('path');
-const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -20,17 +19,21 @@ module.exports = {
     extensions: ['.js', '.json'],
   },
   plugins: [
-    new CopyWebpackPlugin([
-      { from: './README.md' },
-      { from: './package.json' },
-    ]),
-    new webpack.NamedModulesPlugin(),
+    new CopyWebpackPlugin({
+      patterns: [{ from: './README.md' }, { from: './package.json' }],
+    }),
   ],
   module: {
     rules: [
       {
-        test: /\.js$/,
-        loader: 'babel-loader',
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
     ],
   },
