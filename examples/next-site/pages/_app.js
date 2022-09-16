@@ -1,16 +1,18 @@
 import React from 'react';
-import App, { Container } from 'next/app';
+import PropTypes from 'prop-types';
 import { Grommet, grommet as grommetTheme } from 'grommet';
 
-export default class MyApp extends App {
-  render() {
-    const { Component, pageProps } = this.props;
-    return (
-      <Container>
-        <Grommet theme={grommetTheme}>
-          <Component {...pageProps} />
-        </Grommet>
-      </Container>
-    );
-  }
+function App({ Component, pageProps }) {
+  return (
+    <Grommet theme={grommetTheme}>
+      <Component {...pageProps} />
+    </Grommet>
+  );
 }
+
+App.propTypes = {
+  Component: PropTypes.func,
+  pageProps: PropTypes.shape({}),
+};
+
+export default App;

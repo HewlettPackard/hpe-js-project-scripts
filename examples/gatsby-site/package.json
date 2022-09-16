@@ -13,9 +13,11 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
   "dependencies": {
-    "gatsby": "^2.15.34",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "gatsby": "^4.23.0",
+    "grommet": "^2.25.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.5",
     "@hpe/project-scripts": "*",
     "@hpe/react-hooks": "*"
   },
