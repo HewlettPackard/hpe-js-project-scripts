@@ -8,7 +8,8 @@
     "url": "https://github.com/HewlettPackard/hpe-js-project-scripts.git"
   },
   "scripts": {
-    "build": "rm -rf dist && webpack --mode production"
+    "build": "rm -rf dist && webpack --mode production",
+    "release-stable": "babel-node ./tools/release-stable"
   },
   "authors": [
     "Alex Mejias",
