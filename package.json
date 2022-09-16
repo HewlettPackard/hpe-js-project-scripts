@@ -8,6 +8,9 @@
     "webpack": "^4.38.0",
     "webpack-cli": "^3.3.6"
   },
+  "scripts": {
+    "release-stable": "babel-node ./tools/release-stable"
+  },
   "workspaces": [
     "packages/*",
     "examples/cra-site",
