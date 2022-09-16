@@ -3,6 +3,7 @@
   "version": "1.1.2",
   "description": "HPE JS project scripts",
   "main": "index.js",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/HewlettPackard/hpe-js-project-scripts.git"
