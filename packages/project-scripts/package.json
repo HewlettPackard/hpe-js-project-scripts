@@ -8,7 +8,7 @@
     "url": "https://github.com/HewlettPackard/hpe-js-project-scripts.git"
   },
   "scripts": {
-    "build": "rm -rf dist && webpack --mode production",
+    "build": "rm -rf dist && webpack --mode production && cross-env babel ./src/config/ --out-dir ./dist --copy-files && cross-env BABEL_ENV=es6 babel ./src/config/ --out-dir ./dist/es6 --copy-files",
     "release-stable": "babel-node ./tools/release-stable"
   },
   "authors": [
