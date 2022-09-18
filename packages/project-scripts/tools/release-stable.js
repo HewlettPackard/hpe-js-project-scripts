@@ -1,16 +1,15 @@
 import del from 'del';
 import fs from 'fs-extra';
-import git from 'simple-git/promise';
+import git from 'simple-git';
 import path from 'path';
 
-const repoURL = `https://${process.env.GH_TOKEN}@github.com/grommet/grommet.git`;
+const repoURL = `https://${process.env.GH_TOKEN}@github.com/HewlettPackard/hpe-js-project-scripts.git`;
 const localFolder = path.resolve('.tmp/project-scripts');
 const localDist = path.resolve('dist');
 
 if (process.env.CI) {
   del(localFolder).then(() => {
     git()
-      .silent(false)
       .clone(repoURL, localFolder)
       .then(() => git(localFolder).checkout('stable'))
       .then(() => del([`${localFolder}/**/*`]))

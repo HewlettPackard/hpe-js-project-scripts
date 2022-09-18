@@ -7,11 +7,7 @@
     "@babel/node": "^7.19.1",
     "babel-loader": "^8.0.6",
     "copy-webpack-plugin": "^5.0.4",
-    "cross-env": "^7.0.3",
-    "del": "^7.0.0",
     "elliptic": "6.5.4",
-    "fs-extra": "^10.1.0",
-    "simple-git": "^3.14.0",
     "webpack": "^4.38.0",
     "webpack-cli": "^3.3.6"
   },

@@ -3,6 +3,7 @@
   "version": "1.1.2",
   "description": "HPE JS project scripts",
   "main": "index.js",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/HewlettPackard/hpe-js-project-scripts.git"
@@ -34,5 +35,11 @@
     "prettier": "^2.0.5",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "del": "^6.0.0",
+    "fs-extra": "^10.1.0",
+    "simple-git": "^3.14.0"
   }
 }
