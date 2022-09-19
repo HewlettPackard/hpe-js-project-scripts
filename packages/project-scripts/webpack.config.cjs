@@ -7,6 +7,7 @@ module.exports = {
   entry: {
     eslintrc: './src/config/eslintrc.js',
     prettierrc: './src/config/prettierrc.js',
+    index: './index.js'
   },
   output: {
     path: path.resolve('./dist'),
