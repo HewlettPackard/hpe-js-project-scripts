@@ -1,5 +1,4 @@
 // (C) Copyright 2019 Hewlett Packard Enterprise Development LP.
-
 module.exports = {
   printWidth: 80,
   tabWidth: 2,
@@ -10,5 +9,5 @@ module.exports = {
   bracketSpacing: true,
   jsxBracketSameLine: false,
   jsxSingleQuote: false,
-  arrowParens: 'avoid',
+  arrowParens: 'avoid'
 };
