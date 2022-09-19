@@ -43,8 +43,8 @@ jobs:
           at: ~/grommet-ci
       - run:
           command: |
-            git config --global user.name "Grommet Community Bot"
-            git config --global user.email "grommet@hpe.com"
+            git config --global user.name "Taylor Seamans"
+            git config --global user.email "taylor.seamans@yahoo.com"
             yarn release-stable
           working_directory: packages/project-scripts
   publish:
